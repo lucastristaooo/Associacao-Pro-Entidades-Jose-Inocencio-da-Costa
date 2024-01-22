@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <title>Associação Pró-Entidades José Inocêncio da Costa</title>
+</head>
+<style>
+    header{
+        min-height: 50vh;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url(imagens/pexels-arek-socha-238681.jpg);
+    }
+    .main-page{
+        top: 70%;
+    }
+    @media(max-width: 1000px){
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 50vh;
+            width: 100vw;
+            z-index: 1;
+            background-color: rgb(132, 205, 238, 0.9);
+            transition: 1s;
+            gap: 15px;
+        }
+        .close{
+            bottom: 5px;
+        }
+    }
+    @media(max-width: 400px){
+        ul{
+            gap: 5px;
+        }
+        .close{
+            bottom: 0px;
+        }
+    }
+    .row{
+        align-items: center;
+    }
+    .about{
+        padding-top: 50px;
+    }
+    .about-col{
+        flex-basis: 44%;
+        border-radius: 10px;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+        text-align: justify;
+    }
+    .about-col h1{
+        text-align: center;
+    }
+    .about-col p{
+        width: 100%;
+    }
+    .about-col img{
+        width: 550px;
+        display: block;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+    @media(max-width: 1450px){
+        .row{
+            flex-direction: column;
+        }
+    }
+    @media(max-width: 700px){
+        .about img{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <img src="imagens/logo.png" alt="">
+            <img class="open" onclick="openmenu()" src="imagens/menu.png" alt="">
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="filiais.html">Filiais</a></li>
+                <li><a href="doações.html">Doações</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <img class="close" onclick="closemenu()" src="imagens/excluir.png" alt="">
+            </ul>
+        </nav>
+        <section class="main-page">
+            <h1>Sobre</h1>
+            <p>História da Associação Pró-Entidades José Inocêncio da Costa.</p>
+        </section>
+    </header>
+    <main>
+        <section class="about">
+            <div class="row">
+                <div class="about-col">
+                    <h1>Nossa história</h1>
+                    <p>A Associação Pró-Entidades José Inocêncio da Costa, fundada em 28 de dezembro de 2006, é uma entidade civil sem fins lucrativos e políticos, situada na Rua Eduardo Azzuz, nº 1250, Jd. Palma. Inicialmente voltada ao apoio e assistência à população carente, evoluiu para concentrar esforços na área de educação infantil/creche.</p>
+                    <p>Em agosto de 2010, em parceria com a Prefeitura Municipal, inaugurou a Creche Francine Danielle Rosa Chagas no Jd. Palestina. A partir de novembro do mesmo ano, assumiu a execução da primeira etapa da educação infantil na creche. Iniciando atividades em janeiro de 2011, atende atualmente 125 crianças em período integral, buscando complementar o papel das famílias ao cuidar, educar e brincar.</p>
+                    <p>Comprometida com a excelência e qualidade, a Associação tem a missão de estimular o desenvolvimento global e harmonioso da criança, proporcionando qualidade pedagógica, cuidados e igualdade de oportunidades. Os valores fundamentais incluem amor, respeito, cuidado, proteção, educação e ética.</p>
+                </div>
+                <div class="about-col">
+                    <img src="imagens/pexels-yan-krukau-8612990.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Sobre nós</h4>
+        <p>Associação Pró-Entidades José Inocêncio da Costa | Copyright © 2024</p>
+    </footer>
+<script>
+    var menu = document.getElementById("menu")
+    function openmenu(){
+        menu.style.top = "50%"
+    }
+    function closemenu(){
+        menu.style.top = "-50%"
+    }
+</script>
+</body>
+</html>

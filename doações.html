@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <title>Associação Pró-Entidades José Inocêncio da Costa</title>
+</head>
+<style>
+    header{
+        min-height: 50vh;
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url(imagens/pexels-arek-socha-238681.jpg);
+    }
+    .main-page{
+        top: 70%;
+    }
+    @media(max-width: 1000px){
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 50vh;
+            width: 100vw;
+            z-index: 1;
+            background-color: rgb(132, 205, 238, 0.9);
+            transition: 1s;
+            gap: 15px;
+        }
+        .close{
+            bottom: 5px;
+        }
+    }
+    @media(max-width: 400px){
+        ul{
+            gap: 5px;
+        }
+        .close{
+            bottom: 0px;
+        }
+    }
+    .donations-a{
+        color: #777;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <img src="imagens/logo.png" alt="">
+            <img class="open" onclick="openmenu()" src="imagens/menu.png" alt="">
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="filiais.html">Filiais</a></li>
+                <li><a href="doações.html">Doações</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <img class="close" onclick="closemenu()" src="imagens/excluir.png" alt="">
+            </ul>
+        </nav>
+        <section class="main-page">
+            <h1>Doações</h1>
+            <p>Aceitamos doações para contribuir com a instituição.</p>
+        </section>
+    </header>
+    <main>
+        <section class="donations">
+            <p>As doações podem ser feitas por meio de transferência bancária ou via PIX. Para mais informações entre em <a class="donations-a" href="index.html#contato">contato</a>.</p>
+            <div class="row">
+                <div class="donation-col">
+                    <h3>Banco do Brasil S/A</h3>
+                    <p>Agência: <strong>3069-4</strong></p>
+                    <p>Conta: <strong>34085-5</strong></p>
+                    <p>Tipo: <strong>001</strong></p>
+                    <p>CNPJ: <strong>11.108.007/0001-48</strong></p>
+                    <h3>Razão Social:</h3>
+                    <p>Associação Pró-Entidades José Inocêncio da Costa</p>
+                </div>
+                <div class="donation-col">
+                    <h3>Código QR</h3>
+                    <img src="imagens/sample-QR.png" alt="">
+                </div>
+            </div>
+            <p>Doações exclusivamente para a Associação Pró-Entidades José Inocêncio da Costa.</p>
+        </section>
+    </main>
+    <footer>
+        <h4>Sobre nós</h4>
+        <p>Associação Pró-Entidades José Inocêncio da Costa | Copyright © 2024</p>
+    </footer>
+<script>
+    var menu = document.getElementById("menu")
+    function openmenu(){
+        menu.style.top = "50%"
+    }
+    function closemenu(){
+        menu.style.top = "-50%"
+    }
+</script>
+</body>
+</html>
